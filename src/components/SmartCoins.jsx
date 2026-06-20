@@ -50,7 +50,6 @@ export default function SmartCoins() {
                     <div className="text-primary font-black text-sm">Smart Coins</div>
                   </div>
                 </div>
-              </div>
 
               {/* Floating badges */}
               <div className="absolute -top-2 -right-6 card rounded-xl px-4 py-2 shadow-xl">
@@ -60,6 +59,7 @@ export default function SmartCoins() {
               <div className="absolute -bottom-2 -left-6 card rounded-xl px-4 py-2 shadow-xl">
                 <div className="text-xs text-text-muted">Ganhe hoje</div>
                 <div className="text-success font-bold text-sm">+250 coins</div>
+              </div>
               </div>
 
               {/* Tier cards */}
