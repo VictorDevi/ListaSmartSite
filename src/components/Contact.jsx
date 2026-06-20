@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Check } from 'lucide-react'
 import FadeUp from './FadeUp'
 
 export default function Contact() {
@@ -84,7 +85,11 @@ export default function Contact() {
                 cursor: 'pointer',
               }}
             >
-              {sent ? '✓ Mensagem enviada!' : 'Enviar mensagem'}
+              {sent ? (
+                <span className="inline-flex items-center justify-center gap-2">
+                  <Check className="w-5 h-5" strokeWidth={3} /> Mensagem enviada!
+                </span>
+              ) : 'Enviar mensagem'}
             </button>
           </form>
         </FadeUp>

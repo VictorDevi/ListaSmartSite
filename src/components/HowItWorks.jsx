@@ -1,4 +1,5 @@
 import FadeUp from './FadeUp'
+import { Check, Fuel, Trophy } from 'lucide-react'
 
 const steps = [
   {
@@ -44,9 +45,7 @@ function ListPreview() {
             <div className="flex items-center gap-3">
               {item.checked ? (
                 <div className="w-5 h-5 rounded flex items-center justify-center bg-primary flex-shrink-0">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#09090B" strokeWidth="3.5">
-                    <polyline points="20,6 9,17 4,12"/>
-                  </svg>
+                  <Check className="w-3 h-3 text-dark" strokeWidth={3.5} />
                 </div>
               ) : (
                 <div className="w-5 h-5 rounded border flex-shrink-0" style={{ borderColor: 'rgba(255,255,255,.2)' }} />
@@ -65,7 +64,9 @@ function ListPreview() {
       <div className="rounded-xl p-4" style={{ background: 'linear-gradient(135deg,rgba(163,230,21,.1),rgba(163,230,21,.02))', border: '1px solid rgba(163,230,21,.25)' }}>
         <div className="flex justify-between items-start mb-2">
           <div>
-            <div className="text-xs font-semibold text-primary">🏆 Melhor opção</div>
+            <div className="text-xs font-semibold text-primary inline-flex items-center gap-1.5">
+              <Trophy className="w-3.5 h-3.5" /> Melhor opção
+            </div>
             <div className="text-lg font-black text-text-main mt-0.5">Bistek</div>
           </div>
           <div className="text-right">
@@ -75,7 +76,9 @@ function ListPreview() {
         </div>
         <div className="flex gap-5 text-xs text-text-muted">
           <span>Produtos: R$ 79,80</span>
-          <span>⛽ R$ 7,60</span>
+          <span className="inline-flex items-center gap-1">
+            <Fuel className="w-3 h-3" /> R$ 7,60
+          </span>
         </div>
       </div>
     </div>

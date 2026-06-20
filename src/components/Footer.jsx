@@ -1,3 +1,5 @@
+import { Heart } from 'lucide-react'
+
 const productLinks = [
   { href: '#usuarios',       label: 'Para Usuários' },
   { href: '#empresas',       label: 'Para Empresas' },
@@ -104,7 +106,9 @@ export default function Footer() {
           style={{ borderTop: '1px solid rgba(255,255,255,.06)' }}
         >
           <p className="text-text-muted text-sm">© 2025 Lista Smart. Todos os direitos reservados.</p>
-          <p className="text-text-muted text-sm mt-2 md:mt-0">Desenvolvido com ❤️ em Santa Catarina, Brasil</p>
+          <p className="text-text-muted text-sm mt-2 md:mt-0 inline-flex items-center gap-1.5">
+            Desenvolvido com <Heart className="w-3.5 h-3.5 text-primary" fill="currentColor" /> em Santa Catarina, Brasil
+          </p>
         </div>
       </div>
     </footer>

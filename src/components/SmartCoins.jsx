@@ -1,24 +1,25 @@
 import FadeUp from './FadeUp'
+import { BarChart3, CircleDollarSign, Gift, Medal, Smartphone, Trophy } from 'lucide-react'
 
 const tiers = [
-  { emoji: '🥉', name: 'Bronze', range: '0–500' },
-  { emoji: '🥈', name: 'Prata',  range: '500–1500', borderColor: 'rgba(192,192,192,.25)' },
-  { emoji: '🥇', name: 'Ouro',   range: '1500+',    borderColor: 'rgba(255,215,0,.25)' },
+  { Icon: Medal, name: 'Bronze', range: '0–500' },
+  { Icon: Medal, name: 'Prata',  range: '500–1500', borderColor: 'rgba(192,192,192,.25)' },
+  { Icon: Trophy, name: 'Ouro',   range: '1500+',    borderColor: 'rgba(255,215,0,.25)' },
 ]
 
 const rewards = [
   {
-    emoji: '🎁',
+    Icon: Gift,
     title: '500 Coins de Boas-Vindas',
     desc: 'Ao criar sua conta você já recebe 500 Smart Coins — chegando direto no nível Prata.',
   },
   {
-    emoji: '📱',
+    Icon: Smartphone,
     title: '+250 Coins por Nota Fiscal',
     desc: 'Cada nota escaneada rende 250 coins. Quanto mais você contribui, mais rápido avança de nível.',
   },
   {
-    emoji: '📊',
+    Icon: BarChart3,
     title: 'Acompanhe seu impacto',
     desc: 'Veja quantas notas escaneou, buscas realizadas e sua estimativa de economia total acumulada.',
   },
@@ -46,7 +47,7 @@ export default function SmartCoins() {
                   style={{ inset: '3px', background: '#09090B' }}
                 >
                   <div className="text-center">
-                    <div className="text-5xl mb-1">🪙</div>
+                    <CircleDollarSign className="w-12 h-12 mx-auto mb-1 text-primary" strokeWidth={1.8} />
                     <div className="text-primary font-black text-sm">Smart Coins</div>
                   </div>
                 </div>
@@ -54,7 +55,9 @@ export default function SmartCoins() {
               {/* Floating badges */}
               <div className="absolute -top-2 -right-6 card rounded-xl px-4 py-2 shadow-xl">
                 <div className="text-xs text-text-muted">Nível atual</div>
-                <div className="text-primary font-bold text-sm">🥇 Ouro</div>
+                <div className="text-primary font-bold text-sm inline-flex items-center gap-1.5">
+                  <Trophy className="w-3.5 h-3.5" /> Ouro
+                </div>
               </div>
               <div className="absolute -bottom-2 -left-6 card rounded-xl px-4 py-2 shadow-xl">
                 <div className="text-xs text-text-muted">Ganhe hoje</div>
@@ -70,7 +73,7 @@ export default function SmartCoins() {
                     className="card rounded-xl px-4 py-3 text-center"
                     style={t.borderColor ? { borderColor: t.borderColor } : undefined}
                   >
-                    <div className="text-xl mb-1">{t.emoji}</div>
+                    <t.Icon className="w-5 h-5 mx-auto mb-1 text-primary" strokeWidth={1.8} />
                     <div className="text-xs font-bold text-text-main">{t.name}</div>
                     <div className="text-xs text-text-muted">{t.range}</div>
                   </div>
@@ -95,7 +98,7 @@ export default function SmartCoins() {
               {rewards.map(r => (
                 <div key={r.title} className="card rounded-xl p-5 flex gap-4">
                   <div className="icon-wrap w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 text-xl">
-                    {r.emoji}
+                    <r.Icon className="w-5 h-5 text-primary" strokeWidth={2} />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1 text-text-main">{r.title}</h4>

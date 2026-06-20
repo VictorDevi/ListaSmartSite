@@ -1,18 +1,19 @@
 import FadeUp from './FadeUp'
+import { ClipboardList, Fuel, Tags } from 'lucide-react'
 
 const cards = [
   {
-    emoji: '😤',
+    Icon: Tags,
     title: 'Preços diferentes',
     desc: 'O mesmo produto pode custar até 40% mais caro em outro supermercado. Você está pagando o preço certo?',
   },
   {
-    emoji: '⛽',
+    Icon: Fuel,
     title: 'Custo de ir até lá',
     desc: 'De nada adianta economizar R$10 no mercado se você gasta R$15 de gasolina para chegar até lá.',
   },
   {
-    emoji: '📋',
+    Icon: ClipboardList,
     title: 'Lista desorganizada',
     desc: 'Esquecer itens, comprar duplicado, perder tempo. A lista de compras ainda vive no papel ou no WhatsApp?',
   },
@@ -38,7 +39,9 @@ export default function Problem() {
           {cards.map((c, i) => (
             <FadeUp key={c.title} delay={i * 0.1}>
               <div className="card rounded-2xl p-7 text-center h-full">
-                <div className="text-5xl mb-4">{c.emoji}</div>
+                <div className="icon-wrap w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <c.Icon className="w-7 h-7 text-primary" strokeWidth={1.8} />
+                </div>
                 <h3 className="text-lg font-bold mb-2 text-text-main">{c.title}</h3>
                 <p className="text-text-muted text-sm leading-relaxed">{c.desc}</p>
               </div>

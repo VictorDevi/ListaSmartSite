@@ -1,4 +1,5 @@
 import FadeUp from './FadeUp'
+import { CircleDollarSign, Fuel, Trophy } from 'lucide-react'
 
 const CartIcon = () => (
   <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#09090B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -30,7 +31,7 @@ function PhoneMockup() {
           <div className="flex items-center justify-between">
             <div>
               <div className="text-xs text-text-muted">Bom dia,</div>
-              <div className="text-sm font-bold text-text-main">Victor 👋</div>
+              <div className="text-sm font-bold text-text-main">Victor</div>
             </div>
             <div className="w-8 h-8 rounded-full" style={{ background: 'linear-gradient(135deg,#A3E615,#4ADE80)' }} />
           </div>
@@ -42,13 +43,17 @@ function PhoneMockup() {
 
           <div className="rounded-xl p-3 mb-2" style={{ background: 'rgba(163,230,21,.1)', border: '1px solid rgba(163,230,21,.3)' }}>
             <div className="flex items-center justify-between mb-1">
-              <span className="text-xs font-semibold text-primary">🏆 Melhor Opção</span>
+              <span className="text-xs font-semibold text-primary inline-flex items-center gap-1.5">
+                <Trophy className="w-3.5 h-3.5" /> Melhor Opção
+              </span>
               <span className="text-xs font-black text-primary">R$ 87,40</span>
             </div>
             <div className="text-xs font-bold text-text-main mb-1">Bistek</div>
             <div className="flex gap-3 text-xs text-text-muted">
               <span>Produtos R$ 79,80</span>
-              <span>⛽ R$ 7,60</span>
+              <span className="inline-flex items-center gap-1">
+                <Fuel className="w-3 h-3" /> R$ 7,60
+              </span>
             </div>
           </div>
 
@@ -65,7 +70,9 @@ function PhoneMockup() {
           <div className="flex items-center justify-between mb-2">
             <div>
               <div className="text-xs text-text-muted">Smart Coins</div>
-              <div className="text-sm font-bold text-primary">🪙 1.250 coins</div>
+              <div className="text-sm font-bold text-primary inline-flex items-center gap-1.5">
+                <CircleDollarSign className="w-4 h-4" /> 1.250 coins
+              </div>
             </div>
             <span className="text-xs px-2 py-1 rounded-full font-semibold" style={{ background: 'rgba(163,230,21,.2)', color: '#A3E615' }}>Prata</span>
           </div>

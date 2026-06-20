@@ -1,4 +1,5 @@
 import FadeUp from './FadeUp'
+import { ShoppingCart } from 'lucide-react'
 
 const storeButtons = [
   {
@@ -30,7 +31,9 @@ export default function Download() {
             className="card rounded-3xl p-12 md:p-16"
             style={{ background: 'linear-gradient(135deg,rgba(163,230,21,.07),rgba(24,24,27,.9))', border: '1px solid rgba(163,230,21,.18)' }}
           >
-            <div className="text-6xl mb-6">🛒</div>
+            <div className="icon-wrap w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <ShoppingCart className="w-8 h-8 text-primary" strokeWidth={1.8} />
+            </div>
             <h2 className="text-4xl md:text-5xl font-black mb-5 text-text-main">
               Comece a economizar<br /><span className="gradient-text">ainda hoje</span>
             </h2>
