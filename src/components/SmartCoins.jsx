@@ -33,12 +33,18 @@ export default function SmartCoins() {
           {/* Visual */}
           <FadeUp className="flex justify-center">
             <div className="relative">
-              {/* Spinning ring */}
-              <div
-                className="w-52 h-52 rounded-full spin-slow mx-auto"
-                style={{ background: 'conic-gradient(#A3E615 0%,#4ADE80 30%,#A3E615 60%,transparent 60%)', padding: 3 }}
-              >
-                <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#09090B' }}>
+              {/* Ring + static center */}
+              <div className="relative w-52 h-52 mx-auto">
+                {/* Only the ring spins */}
+                <div
+                  className="absolute inset-0 rounded-full spin-slow"
+                  style={{ background: 'conic-gradient(#A3E615 0%,#4ADE80 30%,#A3E615 60%,transparent 60%)' }}
+                />
+                {/* Inner circle with content — does NOT spin */}
+                <div
+                  className="absolute rounded-full flex items-center justify-center"
+                  style={{ inset: '3px', background: '#09090B' }}
+                >
                   <div className="text-center">
                     <div className="text-5xl mb-1">🪙</div>
                     <div className="text-primary font-black text-sm">Smart Coins</div>
