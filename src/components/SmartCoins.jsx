@@ -59,10 +59,6 @@ export default function SmartCoins() {
                   <Trophy className="w-3.5 h-3.5" /> Ouro
                 </div>
               </div>
-              <div className="absolute -bottom-2 -left-6 card rounded-xl px-4 py-2 shadow-xl">
-                <div className="text-xs text-text-muted">Ganhe hoje</div>
-                <div className="text-success font-bold text-sm">+250 coins</div>
-              </div>
               </div>
 
               {/* Tier cards */}
